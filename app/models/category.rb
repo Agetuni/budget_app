@@ -1,5 +1,4 @@
 class Category < ApplicationRecord
-
   # relationships
   belongs_to :user
   has_one_attached :image, dependent: :destroy
