@@ -1,39 +1,45 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
-.layout_body{
-    background-color: #F1F3F2;
+.layout_body {
+  background-color: #f1f3f2;
 }
+
 .home_body {
-    margin-top: 20%;
+  margin-top: 20%;
 }
 
 .logo {
-    max-height: 50%;
-    text-align: center;
-    font-size: xx-large;
-    font-weight:bolder;
+  max-height: 50%;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bolder;
 }
+
 .account {
-    margin:auto;
-    display: flex;
-    flex-direction: column;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
+
 .acc_bttn {
-    margin: 2%;
-    width: 100%;
+  margin: 2%;
+  width: 100%;
 }
-.header{
-    background-color: #3778c2;
-    color:white;
-    padding: 20px 20px;
-    display: flex;
-    justify-content: space-around;
+
+.header {
+  background-color: #3778c2;
+  color: white;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-around;
 }
+
 .field {
-    width: 95%;
-    margin: 2% auto;
+  width: 95%;
+  margin: 2% auto;
 }
-.back_btn{
-    font-size: 20px;
-    color: white;
+
+.back_btn {
+  font-size: 20px;
+  color: white;
 }
