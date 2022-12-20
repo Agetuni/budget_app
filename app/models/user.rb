@@ -9,7 +9,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
 
   # relationships
-  has_one_attached :image, dependent: :destroy
   has_many :categories, dependent: :destroy
   has_many :expenses, dependent: :destroy
 
