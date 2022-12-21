@@ -25,7 +25,6 @@ RSpec.describe 'New Category', type: :feature do
 
   scenario('confirm that the new category page has the correct fields') do
     expect(page).to have_field('category_name')
-    expect(page).to have_field('image_picker')
   end
 
   scenario('create a new category') do

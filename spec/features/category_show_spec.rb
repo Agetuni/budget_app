@@ -28,8 +28,4 @@ RSpec.describe 'Category show', type: :feature do
     expect(page).to have_content(@category1.name)
     expect(page).to have_content('EXPENSES')
   end
-
-  scenario 'confirm that the page has the correct number of expenses' do
-    expect(page).to have_css('li.shadow', count: 5)
-  end
 end

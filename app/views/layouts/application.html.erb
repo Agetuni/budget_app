@@ -21,7 +21,7 @@
      <% if current_user %>
       <nav class="navbar navbar-light bg-light justify-content-between nav_bar">
           <%= link_to authenticated_root_path do %><i class="fa fa-bars back_btn"></i> <% end %>
-          <span class="navbar-brand d-flex justify-content-center white_text">SAVEIT</span>  
+           <%= link_to authenticated_root_path do %> <span class="navbar-brand d-flex justify-content-center white_text">SAVEIT</span>   <% end %>
          <%= button_to 'SignOut'.html_safe, destroy_user_session_path, method: :delete,  class: "btn btn-sm  btn-danger white_text action_btn" %>
       </nav>
      <%end%>
