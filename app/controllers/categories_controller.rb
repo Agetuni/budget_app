@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @categories = setup_categories
 
@@ -21,6 +23,11 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
   end
+  def destroy
+    @category = Category.find(params[:id])
+    @category.destroy
+    redirect_to authenticated_root_path
+  end
 
   def show
     data = Category.with_attached_image.find_by_sql("SELECT categories.*,
@@ -38,23 +45,13 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     @category.user_id = current_user.id
     if @category.save
-      #   success('New category was successfully created.', redirect: true)
       redirect_to authenticated_root_path
     else
-      #   failure('Category was not created because: ', @category)
       render :new
     end
   end
 
-  def destroy
-    @category = Category.find(params[:id])
-    if @category.destroy
-      success("Category (#{@category.name}) was successfully deleted.", redirect: true)
-    else
-      failure("Category (#{@category.name}) was not deleted because: ", @category)
-    end
-    redirect_to authenticated_root_path
-  end
+
 
   def category_params
     params.require(:category).permit(:name, :image)
