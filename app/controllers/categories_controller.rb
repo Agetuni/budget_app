@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @categories = setup_categories
 
@@ -23,6 +23,7 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
   end
+
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
@@ -50,8 +51,6 @@ class CategoriesController < ApplicationController
       render :new
     end
   end
-
-
 
   def category_params
     params.require(:category).permit(:name, :image)
