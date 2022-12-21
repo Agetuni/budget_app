@@ -88,7 +88,7 @@ The end result should follow the following data model (this is an Entity Relatio
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-
+[video link ](https://www.loom.com/share/a8439109f6984dbd9c3ac177d94cc580)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
